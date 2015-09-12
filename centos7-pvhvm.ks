@@ -16,7 +16,7 @@ keyboard us
 # Configure networking without IPv6, firewall off
 
 # for STATIC IP: uncomment and configure
-network --onboot=yes --device=eth0 --bootproto=static --ip=10.10.8.65 --netmask=255.255.0.0 --gateway=10.10.0.1 --nameserver=8.8.8.8 --noipv6 --hostname=$$$
+network --onboot=yes --device=eth0 --bootproto=static --ip=10.10.8.65 --netmask=255.255.0.0 --gateway=10.10.0.1 --nameserver=10.10.0.1 --noipv6 --hostname=ComputeNode1
 
 # for DHCP:
 # network --bootproto=dhcp --device=eth0 --onboot=on
@@ -47,6 +47,7 @@ eula --agreed
 zerombr
 clearpart --all
 part /boot --fstype=ext3 --size=256 --asprimary
+part swap --size 1024
 part / --fstype=ext4 --grow --size=1024 --asprimary
 bootloader --timeout=5 --location=mbr
 
