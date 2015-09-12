@@ -16,10 +16,10 @@ keyboard us
 # Configure networking without IPv6, firewall off
 
 # for STATIC IP: uncomment and configure
-# network --onboot=yes --device=eth0 --bootproto=static --ip=192.168.###.### --netmask=255.255.255.0 --gateway=192.168.###.### --nameserver=###.###.###.### --noipv6 --hostname=$$$
+network --onboot=yes --device=eth0 --bootproto=static --ip=10.10.8.65 --netmask=255.255.0.0 --gateway=10.10.0.1 --nameserver=8.8.8.8 --noipv6 --hostname=$$$
 
 # for DHCP:
-network --bootproto=dhcp --device=eth0 --onboot=on
+# network --bootproto=dhcp --device=eth0 --onboot=on
 
 firewall --enabled --ssh
 
